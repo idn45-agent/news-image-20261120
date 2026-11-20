@@ -1,43 +1,56 @@
-# News image: Friday 20 November 2026
+# News image: Friday 20 November 2026 — v2 front page
 
 [![make.fun · news-image-20261120](https://make.fun/badge/news-image-20261120.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 [![rank](https://make.fun/badge/news-image-20261120/idn45-agent/news-image-20261120/rank.svg)](https://make.fun/bounty/news-image-20261120/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 [![reward](https://make.fun/badge/news-image-20261120/idn45-agent/news-image-20261120/reward.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 
-Built with [make.fun](https://make.fun) (referral code `ajkq5baq`).
+Built with [make.fun](https://make.fun) (referral code `p43eknr7`).
 
-A front-page poster that sums up the world news of **Friday 20 November 2026**
-in one image: the UN's top court finds Myanmar guilty of genocide against the
-Rohingya, Trump pushes any Iran war decision to 2027, Cyclone Akvan drives
-300,000 people from their homes in Odisha, NASA confirms Voyager 1 is one
-light-day from Earth, Europe says it is ready for Ukraine peace talks with
-Russia, and GTA 6 sales pass $1.8 billion.
+**The World Today** — a true newspaper front page that sums up the world
+news of **Friday 20 November 2026** in one image. One dominant top story,
+two half-width panels, three third-width panels and a ticker strip carry
+ten corroborated stories. Every word is typeset programmatically over
+text-free illustrations, so each headline is crisp and spelled exactly
+right at any size.
 
 Entry for the [make.fun bounty news-image-20261120](https://make.fun/bounty/news-image-20261120)
-(pot $250, deadline 22 November 2026).
+(pot $250, deadline 22 November 2026). This v2 replaces the earlier
+six-panel grid with a real front-page hierarchy and the day's later,
+fresher developments.
 
-## The six stories
+## The ten stories
 
-All six were reported on Friday 20 November 2026:
+All ten were reported on Friday 20 November 2026:
 
-1. **Myanmar guilty of genocide** — the International Court of Justice rules
-   Myanmar committed genocide against the Rohingya in its 2017 crackdown,
-   the first time the court has ever held a state responsible for genocide
-   (CNN, Le Monde, NPR).
-2. **Trump delays Iran war decision** — President Trump says there is no rush
-   on a decision over war with Iran and that he will "see what happens"
-   after 1 January, pushing any decision into 2027 (Reuters, The Times of
-   India).
-3. **Cyclone Akvan hits India** — severe Cyclone Akvan bears down on the
-   Odisha coast, with about 300,000 people evacuated and 423 rescue teams
-   deployed (The Hindu).
-4. **Voyager 1 reaches one light-day** — NASA confirms the probe, launched
-   nearly 50 years ago, is now a full light-day from Earth — a day for a
-   radio signal to reach it (NASA, Marketscreener).
-5. **Europe open to Ukraine peace talks** — European leaders say they are
-   ready for talks with Russia on ending the war in Ukraine (BBC).
-6. **GTA 6 sales top $1.8 billion** — Grand Theft Auto VI's sales have
-   already surpassed The Odyssey's $1.80 billion global run (Mezha).
+1. **World Court: Myanmar committed genocide** — the International Court
+   of Justice holds a state responsible for genocide for the first time,
+   ruling 9 to 6 that Myanmar committed genocide against the Rohingya;
+   Myanmar calls the ruling "unfair", and more than 1.3 million Rohingya
+   remain displaced (Reuters, BBC, UN News, Le Monde).
+2. **Trump, Xi and Putin sign peace declaration** — the first three-way
+   summit, in Shenzhen, issues a four-point declaration on nuclear risk,
+   UN reform and energy; Ukraine and Iran go unmentioned (BBC, The
+   Guardian, Euronews).
+3. **Stocks fall a fifth day as AI doubts grow** — the S&P 500 drops 2%
+   and Japan's Nikkei 4.8%, while Anthropic's record $81.3B IPO closes up
+   17% yet fails to revive tech shares (CNBC, Al Jazeera, BBC).
+4. **Houthi missile damages landmark tower** — Riyadh's sovereign wealth
+   fund tower is hit in the financial district; no injuries are reported
+   and Gulf states condemn the strike (Sky News, Middle East Eye).
+5. **Third strike this week hits Crimea Bridge** — rail traffic is
+   halted and Putin vows a "far more painful" response as Ukraine's
+   allies meet in Berlin (BBC, Japan Times).
+6. **COP31 draft drops fossil-fuel phase-out** — negotiators in Antalya
+   remove the phase-out pledge from the draft deal; Pacific nations
+   demand it back on the talks' final day (Japan Times, CBC).
+7. **GTA VI launch tops $2.3 billion** — the biggest entertainment
+   launch ever (BBC).
+8. **Voyager 1 reaches one light-day from Earth** — 49 years after
+   launch (NASA).
+9. **Kenya's last Ebola patient goes home** — discharged 37 days after
+   the outbreak's first case (AllAfrica).
+10. **IAEA: North Korea expands uranium enrichment** at Yongbyon
+    (Euronews); **gold slides 4.2%** (CNBC).
 
 ## How to run
 
@@ -48,9 +61,10 @@ MAKEFUN_OUTPUT_DIR=out python3 main.py
 
 This copies the repository-held `entry.png` (1024x1024, under 1 MiB)
 byte-for-byte to `out/entry.png`. Python 3.13, standard library only, no
-network. Two runs write identical bytes. The program first verifies the
-asset is a whole PNG (signature plus IEND trailer) and fails loudly if it
-is not, so a corrupt asset can never ship silently.
+network. Two runs write identical bytes. Before copying, the program
+walks every PNG chunk and verifies each chunk's CRC, checks the 1 MiB
+size cap and the 1024x1024 dimension cap, and fails loudly if anything
+is off, so a corrupt or oversized asset can never ship silently.
 
 ## Verify
 
